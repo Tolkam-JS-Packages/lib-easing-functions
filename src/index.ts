@@ -98,30 +98,18 @@ const easingFunctions: EasingFunctions =  {
         return 0.5 * (Math.sqrt(1 - (pos -= 2) * pos) + 1);
     },
 
-    easeOutBounce: function(pos: number) {
-        if (pos < (1 / 2.75)) {
-            return (7.5625 * pos * pos);
-        } else if (pos < (2 / 2.75)) {
-            return (7.5625 * (pos -= (1.5 / 2.75)) * pos + 0.75);
-        } else if (pos < (2.5 / 2.75)) {
-            return (7.5625 * (pos -= (2.25 / 2.75)) * pos + 0.9375);
-        } else {
-            return (7.5625 * (pos -= (2.625 / 2.75)) * pos + 0.984375);
-        }
-    },
-
     easeInBack: function(pos: number) {
-        var s = 1.70158;
+        const s = 1.70158;
         return pos * pos * ((s + 1) * pos - s);
     },
 
     easeOutBack: function(pos: number) {
-        var s = 1.70158;
+        const s = 1.70158;
         return (pos = pos - 1) * pos * ((s + 1) * pos + s) + 1;
     },
 
     easeInOutBack: function(pos: number) {
-        var s = 1.70158;
+        let s = 1.70158;
         if ((pos /= 0.5) < 1) return 0.5 * (pos * pos * (((s *= (1.525)) + 1) * pos - s));
         return 0.5 * ((pos -= 2) * pos * (((s *= (1.525)) + 1) * pos + s) + 2);
     },
@@ -131,18 +119,18 @@ const easingFunctions: EasingFunctions =  {
     },
 
     swingFromTo: function(pos: number) {
-        var s = 1.70158;
+        let s = 1.70158;
         return ((pos /= 0.5) < 1) ? 0.5 * (pos * pos * (((s *= (1.525)) + 1) * pos - s)) :
             0.5 * ((pos -= 2) * pos * (((s *= (1.525)) + 1) * pos + s) + 2);
     },
 
     swingFrom: function(pos: number) {
-        var s = 1.70158;
+        const s = 1.70158;
         return pos * pos * ((s + 1) * pos - s);
     },
 
     swingTo: function(pos: number) {
-        var s = 1.70158;
+        const s = 1.70158;
         return (pos -= 1) * pos * ((s + 1) * pos + s) + 1;
     },
 
@@ -211,7 +199,6 @@ export interface EasingFunctions {
     easeInCirc: EasingFunction,
     easeOutCirc: EasingFunction,
     easeInOutCirc: EasingFunction,
-    easeOutBounce: EasingFunction,
     easeInBack: EasingFunction,
     easeOutBack: EasingFunction,
     easeInOutBack: EasingFunction,
@@ -224,4 +211,4 @@ export interface EasingFunctions {
     easeFromTo: EasingFunction,
     easeFrom: EasingFunction,
     easeTo: EasingFunction,
-};
+}
