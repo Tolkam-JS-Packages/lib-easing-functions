@@ -1,9 +1,7 @@
 {
     "name": "@tolkam/lib-easing-functions",
-    "version": "1.0.0",
     "description": "Easing functions",
     "main": "src/index.ts",
     "license": "UNLICENSED",
-    "private": true,
     "devDependencies": {}
 }

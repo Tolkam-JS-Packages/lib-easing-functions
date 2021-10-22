@@ -1,5 +1,9 @@
 /**
  * Easing functions
+ *
+ * based on https://github.com/danro/jquery-easing
+ * @see https://github.com/danro/jquery-easing/blob/master/jquery.easing.js
+ * © 2008 George McGinley Smith
  */
 const easingFunctions: EasingFunctions =  {
     linear: function(pos: number) {
